@@ -17,10 +17,13 @@ enum Masseinheiten {
 
 
 class Triangle {
-  double width;
-  double height;
+ double _width;
+ double _height;
+ double get widthInMeters {
+  return _width / 1000;
+}
 
-  Triangle._(this.width, this.height);
+Triangle._(this._width, this._height);
   Triangle.mm(double width, double height) : this._(width, height);
   Triangle.cm(double width, double height) : this._(width * 10, height * 10);
   Triangle.dm(double width, double height) : this._(width * 100, height * 100);
