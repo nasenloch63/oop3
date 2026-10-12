@@ -17,7 +17,9 @@ class Triangle {
  double get widthInMeters {
   return _width / 1000;
 }
-
+double get heightInMeters {
+  return _height / 1000;
+}
 double get heightInFeet {
   return _height / 304.8;
 }
@@ -26,6 +28,9 @@ set widthInMeters(double wert) {
 }
 set heightInFeet(double wert) {
   _height = wert * 304.8;
+}
+set heightInMeters(double wert) {
+  _height = wert * 1000;
 }
 Triangle._(this._width, this._height);
   Triangle.mm(double width, double height) : this._(width, height);
