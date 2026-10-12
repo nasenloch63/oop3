@@ -11,11 +11,6 @@ enum Masseinheiten {
   const Masseinheiten(this.faktor);
 }
 
-
-
-
-
-
 class Triangle {
  double _width;
  double _height;
@@ -25,6 +20,9 @@ class Triangle {
 
 double get heightInFeet {
   return _height / 304.8;
+}
+set widthInMeters(double wert) {
+  _width = wert * 1000;
 }
 Triangle._(this._width, this._height);
   Triangle.mm(double width, double height) : this._(width, height);
