@@ -24,6 +24,9 @@ double get heightInFeet {
 set widthInMeters(double wert) {
   _width = wert * 1000;
 }
+set heightInFeet(double wert) {
+  _height = wert * 304.8;
+}
 Triangle._(this._width, this._height);
   Triangle.mm(double width, double height) : this._(width, height);
   Triangle.cm(double width, double height) : this._(width * 10, height * 10);
