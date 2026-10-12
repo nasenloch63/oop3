@@ -23,6 +23,9 @@ class Triangle {
   return _width / 1000;
 }
 
+double get heightInFeet {
+  return _height / 304.8;
+}
 Triangle._(this._width, this._height);
   Triangle.mm(double width, double height) : this._(width, height);
   Triangle.cm(double width, double height) : this._(width * 10, height * 10);
